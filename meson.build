@@ -364,8 +364,13 @@ openhmd_dep = declare_dependency(
 
 if get_option('tests')
 	unittests_sources = [
+		'src/matrices.c',
 		'src/omath.c',
+		'src/ukf.c',
+		'src/unscented.c',
+		'src/drv_oculus_rift/rift-fusion-ovr.c',
 		'src/drv_oculus_rift/rift-joint-pose.c',
+		'src/drv_oculus_rift/rift-kalman-6dof.c',
 		'src/drv_oculus_rift/rift-sync-monitor.c',
 		'src/drv_oculus_rift/rift-cam-calib.c',
 		'tests/unittests/highlevel.c',
